@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-lsfh*__gmdcvua0%7eq!)g4pdfdthtj7+(_xu#6kdukw@(qpev
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
-
+# '.vercel.app'
 # Application definition
 
 INSTALLED_APPS = [
@@ -166,3 +166,7 @@ CKEDITOR_CONFIGS = {
         'width' : '100%',
     },
 }
+
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
