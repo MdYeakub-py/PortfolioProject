@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-lsfh*__gmdcvua0%7eq!)g4pdfdthtj7+(_xu#6kdukw@(qpev
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['*']
 
-# '.vercel.app'
+# '.vercel.app', '.now.sh'
 # Application definition
 
 INSTALLED_APPS = [
@@ -85,17 +85,17 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': "django.db.backends.postgresql_psycopg2",
-#         'HOST': "db.nptaxumkeoydagwbaycf.supabase.co",
-#         'NAME': "postgres",
-#         'USER': "postgres",
-#         'PASSWORD': "mdyeakub@123567",
-#         'PORT': "5432",
+DATABASES = {
+    #  'default': {
+    #      'ENGINE': "django.db.backends.postgresql_psycopg2",
+    #      'HOST': "db.nptaxumkeoydagwbaycf.supabase.co",
+    #      'NAME': "postgres",
+    #     'USER': "postgres",
+    #     'PASSWORD': "mdyeakub@123567",
+    #     'PORT': "5432",
 
-#     }
-# }
+    #  }
+}
 
 
 # Password validation
@@ -149,6 +149,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 MEDIA_URLS ='/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -173,6 +176,3 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-
-# STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
